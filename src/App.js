@@ -13,11 +13,18 @@ function App() {
       setCoins(res.data)
       console.log(res.data);
     })
-  })
+    .catch(error => console.log(error))
+  }, []);
 
   return (
-    <div className="App">
-      <h1>Crypto Tracker</h1>
+    <div className="coin-app">
+      <div className="coin-search">
+        <h1 className="coin-text">Search a currency</h1>
+        <form>
+          <input type="text" placeholder="Search" className="coin-input"/>
+        </form>
+      </div>
+      
     </div>
   );
 }
