@@ -40,8 +40,10 @@ function App() {
             key={coin.id} 
             name={coin.name} 
             image={coin.image} 
-            volume={coin.market_cap}
+            volume={coin.total_volume}
             price={coin.current_price}
+            priceChange={coin.price_change_percentage_24h}
+            marketcap={coin.market_cap}
             />
         )
       })}
